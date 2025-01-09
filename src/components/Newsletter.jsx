@@ -22,7 +22,7 @@ const Newsletter = () => {
           width: '40%',
           display: "flex", 
           alignItems: "center", 
-          gap: '17rem', 
+          gap: '22rem', 
           margin: "0 auto", 
           marginTop: '30px', 
           marginBottom: '15px',

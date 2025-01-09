@@ -14,14 +14,21 @@ const Navbar = () => {
   };
 
   return (
-    <div div style={{width:"80vw", margin:"0 auto"}}>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: "16px", marginTop: "20px" }}>
+    <div style={{ width: "80vw", margin: "0 auto" }}>
+      <div style={{
+        display: "flex", 
+        justifyContent: "space-between", 
+        fontSize: "16px", 
+        marginTop: "20px", 
+        padding: "0 10px", // Added padding for responsiveness
+        boxSizing: "border-box"
+      }}>
         <Link to='/home'>
-        <img
-          src={assets.logo}
-          alt='logo'
-          style={{ width: "130px", height: "30px", marginTop: "7px" }}
-        />
+          <img
+            src={assets.logo}
+            alt='logo'
+            style={{ width: "130px", height: "30px", marginTop: "7px" }}
+          />
         </Link>
 
         <div
@@ -32,9 +39,12 @@ const Navbar = () => {
             textTransform: "uppercase",
             fontSize: "16px",
             overflow: "hidden",
+            flexWrap: "wrap", // Allow wrapping of menu items on smaller screens
+            marginLeft: "auto", // Align menu items to the right
+            marginRight: "auto" // Ensure centered alignment
           }}
         >
-          <NavLink to='/home' style={{ textDecoration: "none", display: "flex", flexDirection: "column"}}>
+          <NavLink to='/home' style={{ textDecoration: "none", display: "flex", flexDirection: "column" }}>
             <p>Home</p>
             <hr style={{ width: "20px", height: "0.1px", display: "none" }} />
           </NavLink>
@@ -62,7 +72,12 @@ const Navbar = () => {
         </div>
 
         <div
-          style={{ display: "flex", alignItems: "center", gap: "1.65rem", position: "relative" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1.65rem",
+            position: "relative",
+          }}
         >
           <img
             src={assets.search_icon}
@@ -109,9 +124,7 @@ const Navbar = () => {
             style={{ width: "19px", cursor: "pointer" }}
           />
         </div>
-
       </div>
-      
     </div>
   );
 };

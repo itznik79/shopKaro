@@ -4,90 +4,66 @@ import { assets } from "../assets/frontend_assets/assets";
 
 const Footer = () => {
   return (
-    <Box>
+    <Box sx={{ width: "80vw", margin: "0 auto", padding: "0 10px" }}>
+      {/* Upper Section */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: '5rem',
+          gap: "5rem",
           my: 10,
-          mt: 40,
+          mx: "auto",
           textAlign: "center",
           fontSize: "0.875rem",
-
-          // For responsive grid layout on 'sm' screen and up
+          width: "100%", // Ensure full width
+          boxSizing: "border-box", // Prevent layout issues
           "@media (min-width: 600px)": {
             display: "grid",
-            gridTemplateColumns: "3fr 1fr 1fr", // grid-cols-[3fr_1fr_1fr]
+            gridTemplateColumns: "3fr 1fr 1fr", // Grid layout on larger screens
+            textAlign: "left",
           },
         }}
       >
+        {/* First Section */}
         <Box>
-          <img src={assets.logo} width="130px" marginBottom="1.25rem" />
-          <Typography
-            style={{
-              color: "grey",
-              width: "70%",
-              "@media (min-width: 900px)": {
-                width: "3rem",
-              },
-            }}
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+          <img src={assets.logo} alt="Logo" style={{ marginBottom: "1.25rem" }} width="130px" />
+          <Typography sx={{ color: "grey", width: { xs: "100%", sm: "95%" } }}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </Typography>
         </Box>
 
+        {/* Second Section */}
         <Box>
-          <h3
-            style={{
-              fontWeight: 500,
-              fontSize: "1.25rem",
-              marginBottom: "1.25rem",
-            }}
-          >
+          <Typography variant="h6" sx={{ fontWeight: 500, fontSize: "1.25rem", marginBottom: "1.25rem" }}>
             GET IN TOUCH
-          </h3>
-          <ul
-            style={{
-              color: "grey",
-              display: "flex",
-              flexDirection: "column",
-              gap: "4px",
-            }}
-          >
+          </Typography>
+          <Box component="ul" sx={{ color: "grey", display: "flex", flexDirection: "column", gap: "4px", listStyleType: "none", padding: 0, margin: 0 }}>
             <li>Home</li>
             <li>About Us</li>
             <li>Delivery</li>
             <li>Privacy Policy</li>
-          </ul>
+          </Box>
         </Box>
 
+        {/* Third Section */}
         <Box>
-          <h3
-            style={{
-              fontWeight: 500,
-              fontSize: "1.25rem",
-              marginBottom: "1.25rem",
-            }}
-          >
-            GET IN TOUCH
-          </h3>
-          <ul
-            style={{
-              color: "grey",
-              display: "flex",
-              flexDirection: "column",
-              gap: "4px",
-            }}
-          >
+          <Typography variant="h6" sx={{ fontWeight: 500, fontSize: "1.25rem", marginBottom: "1.25rem" }}>
+            CONTACT US
+          </Typography>
+          <Box sx={{ color: "grey", display: "flex", flexDirection: "column", gap: "1px", listStyleType: "none", padding: 0, margin: 0 }}>
             <li>+91-87-5000-0000</li>
             <li>ugranga@gmail.com</li>
             <li>Instagram</li>
-          </ul>
+          </Box>
         </Box>
+      </Box>
+
+      {/* Footer Section */}
+      <Box sx={{ width: "100%", mx: "auto", mt: 5, textAlign: "center" }}>
+        <Box sx={{ height: "1px", backgroundColor: "grey", width: "100%" }}></Box>
+        <Typography sx={{ paddingTop: "10px", paddingBottom: "10px", fontSize: "0.875rem", color: "#414141" }}>
+          Copyright 2024@ nikgau.dev - All Rights Reserved.
+        </Typography>
       </Box>
     </Box>
   );

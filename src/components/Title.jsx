@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
+
 const Title = ({text1, text2}) => {
   return (
     <div style={{display:"inline-flex", gap: 2, alignItems:"center", marginBottom: 3,}}>

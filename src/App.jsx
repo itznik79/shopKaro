@@ -7,6 +7,7 @@ import Collection from './pages/Collection'
 import About from './pages/About'
 import Contact from "./pages/Contact"
 import Footer from './components/Footer'
+import Login from './pages/Login'
 
 const App = () => {
 
@@ -30,6 +31,11 @@ const App = () => {
     {
       path: ROUTES.CONTACT,
       element: <Contact/>
+    },
+
+    {
+      path: ROUTES.LOGIN,
+      element: <Login/>
     }
 
 
